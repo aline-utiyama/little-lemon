@@ -1,5 +1,5 @@
-import Banner from "../componensts/Banner";
-import Menu from "../componensts/Menu";
+import Banner from "../components/Banner";
+import Menu from "../components/Menu";
 
 const Main = () => {
   return (
