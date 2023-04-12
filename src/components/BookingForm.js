@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BookingForm = () => {
+const BookingForm = (props) => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [gestsNumber, setGestsNumber] = useState(1);
@@ -21,21 +21,30 @@ const BookingForm = () => {
     <div className="form-section">
       <div className="container">
         <div className="booking-form">
-          <h1>Book Now</h1>
-          <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
-            <label htmlFor="res-date">Choose date</label>
+          <h4>Reserve a table</h4>
+          <form
+            style={{ display: "grid", maxWidth: "200px", gap: "12px" }}
+            onSubmit={props.submit}
+          >
+            <label htmlFor="res-date" className="form-label">
+              Choose date
+            </label>
             <input
               type="date"
               id="res-date"
               onChange={(e) => setDate(e.target.value)}
             ></input>
-            <label htmlFor="res-time">Choose time</label>
+            <label htmlFor="res-time" className="form-label">
+              Choose time
+            </label>
             <select id="res-time " onChange={(e) => setTime(e.target.value)}>
               {availableTimes.map((time) => (
                 <option key={time}>{time}</option>
               ))}
             </select>
-            <label htmlFor="guests">Number of guests</label>
+            <label htmlFor="guests" className="form-label">
+              Number of guests
+            </label>
             <input
               type="number"
               placeholder="1"
@@ -44,12 +53,18 @@ const BookingForm = () => {
               id="guests"
               onChange={(e) => setGestsNumber(e.target.value)}
             ></input>
-            <label htmlFor="occasion">Occasion</label>
+            <label htmlFor="occasion" className="form-label">
+              Occasion
+            </label>
             <select id="occasion" onChange={(e) => setOccasion(e.target.value)}>
               <option>Birthday</option>
               <option>Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation"></input>
+            <input
+              className="btn-main"
+              type="submit"
+              value="Make Your reservation"
+            ></input>
           </form>
         </div>
       </div>

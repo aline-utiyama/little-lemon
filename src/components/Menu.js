@@ -7,7 +7,7 @@ const Menu = () => {
     <div className="menu-section">
       <div className="container">
         <div className="menu-selector">
-          <h3>Order FOR DELIVERY!</h3>
+          <h3>ORDER FOR DELIVERY!</h3>
           <div className="menu-options">
             <ul>
               <li>
