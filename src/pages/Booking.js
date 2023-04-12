@@ -1,10 +1,17 @@
 import BookingForm from "../components/BookingForm";
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+import React, { useState } from "react";
 
 const Booking = () => {
   return (
     <>
-      <h1>Bookings</h1>
-      <BookingForm />
+      <Header></Header>
+      <Main>
+        <BookingForm />
+      </Main>
+      <Footer></Footer>
     </>
   );
 };

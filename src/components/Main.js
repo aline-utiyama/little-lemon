@@ -1,13 +1,5 @@
-import Banner from "../components/Banner";
-import Menu from "../components/Menu";
-
-const Main = () => {
-  return (
-    <main>
-      <Banner></Banner>
-      <Menu></Menu>
-    </main>
-  );
+const Main = (props) => {
+  return <main>{props.children}</main>;
 };
 
 export default Main;
