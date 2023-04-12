@@ -94,3 +94,8 @@ main {
   margin: 0 auto;
   padding: 0 60px;
 }
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
